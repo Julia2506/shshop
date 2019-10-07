@@ -1,0 +1,151 @@
+@-webkit-keyframes draw {
+  0% {
+    opacity: 1;
+    stroke-dashoffset: -99.47578430175781;
+    fill: transparent;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  35% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  60% {
+    fill: #3da35a;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    fill: #3da35a;
+    stroke-dashoffset: 0;
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes draw {
+  0% {
+    opacity: 1;
+    stroke-dashoffset: -99.47578430175781;
+    fill: transparent;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  35% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  60% {
+    fill: #3da35a;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    fill: #3da35a;
+    stroke-dashoffset: 0;
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+.path {
+  margin: 20px 0;
+}
+
+.product {
+  width: 100%;
+  text-align: center;
+}
+
+.product_photo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f5f3f3;
+  height: 400px;
+}
+
+.product_photo div {
+  width: 533px;
+  height: inherit;
+}
+
+.product_main_info {
+  margin: 90px 0;
+}
+
+.product_main_info h3 {
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+.product_main_info .sku {
+  color: #b1b1b1;
+  font-size: 13px;
+}
+
+.product_main_info p {
+  font-size: 13px;
+  margin: 30px 0;
+}
+
+.product_main_info .container {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  right: 0;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+}
+
+.product_main_info svg {
+  width: 100%;
+  height: 100%;
+}
+
+.product_main_info path {
+  stroke-dasharray: 99.47578430175781;
+  stroke-dashoffset: -99.47578430175781;
+  fill: transparent;
+}
+
+.product_main_info svg.animate path {
+  -webkit-animation: 1.7s ease forwards draw;
+          animation: 1.7s ease forwards draw;
+  opacity: 1;
+}
+
+.product_main_info button {
+  width: 210px;
+  height: 55px;
+  background-color: #ff8c29;
+  border: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px #ff8c29;
+          box-shadow: 0 0 10px #ff8c29;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.product_main_info button:hover {
+  -webkit-box-shadow: 0 0 25px #ff8c29;
+          box-shadow: 0 0 25px #ff8c29;
+}
+
+.product_main_info button:focus {
+  outline: none;
+}
+/*# sourceMappingURL=product.css.map */

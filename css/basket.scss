@@ -1,0 +1,184 @@
+@mixin adaptive($screen) {
+    @if ($screen == big_mobile) {
+        @media(max-width: 1280px) { @content; }
+    } @else if ($screen == mobile) {
+        @media(max-width: 770px) { @content; }
+    }
+}
+
+.img-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 11%;
+
+        @include adaptive(mobile) {
+            width: 50%;
+            margin-top: 150px;
+        }
+    }  
+}
+
+.basket-box {
+    display: table;
+    border-collapse: collapse; 
+    width: 100%;
+    margin-top: 50px;
+
+    @include adaptive(mobile) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 120px;  
+    }
+
+    caption {
+        @include adaptive(mobile) {
+            margin-bottom: 20px;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid black;
+
+        @include adaptive(mobile) {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        th {
+            text-align: start;
+            padding: 10px;
+
+            @include adaptive(mobile) {
+                display: none; 
+            }
+        }
+
+        .photo { 
+            width: 120px;
+            padding: 10px 0;
+
+            @include adaptive(mobile) {
+                width: 60%;
+                margin: 0 auto;
+            }
+
+            div {
+                width: 100px;
+                height: 100px;
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                border: 1px solid #bdbdbd;
+                margin: 0 auto;
+
+                @include adaptive(mobile) {
+                    width: inherit;
+                }
+            }
+        }
+
+        .name {
+            padding-left: 10px;
+            width: 55%;
+
+            span {
+                @include adaptive(mobile) {;
+                    font-weight: 600;
+                }
+            }
+
+            @include adaptive(mobile) {
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+
+        .size {
+            text-align: center;
+
+            @include adaptive(mobile) {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+
+        .count {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 45px;
+            border: none;
+
+            @include adaptive(mobile) {
+               margin-top: 0;
+            }
+
+            .bnts {
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: black;
+                    color: white;
+                    width: 16px;
+                    height: 16px;
+                    margin-top: 3px;
+                    margin-left: 10px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .final-price {
+            text-align: center;
+        }
+
+        .del {
+            position: relative;
+            width: 60px;
+            height: 60px;
+
+            @include adaptive(mobile) {
+                margin: 0 auto;
+                padding-bottom: 40px;
+            }
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 45px;
+                background-color: black;
+                width: 1px;
+                height: 20px;
+                transform: rotate(45deg);
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 45px;
+                background-color: black;
+                width: 1px;
+                height: 20px;
+                transform: rotate(-45deg);
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+            }
+        }
+    }         
+}
+
+
